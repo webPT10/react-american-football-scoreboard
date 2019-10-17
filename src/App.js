@@ -34,8 +34,11 @@ function App() {
         <BottomRow down={downValue}/>
       </section>
       <section className="buttons">
+        <div>
+        <button className="buttons" onClick={() => setHomeScore(homeScore *0) + setAwayScore(awayScore*0)}>Reset</button>
+        </div>
         <div className="homeButtons">
-          <button className="homeButtons__touchdown" onClick={()=>setHomeScore(homeScore+6)}>Home Touchdown</button>
+          <button className="homeButtons__touchdown" onClick={()=> setHomeScore(homeScore+6)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={()=>setHomeScore(homeScore+1)}>Home Extra Point</button>
           <button className="homeButtons__fieldGoal" onClick={()=> setHomeScore(homeScore+3)}>Home Field Goal</button>
         </div>
@@ -50,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+

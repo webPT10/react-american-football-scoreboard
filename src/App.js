@@ -8,6 +8,7 @@ function App() {
 
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [downValue, setDownValue] = useState(33);
 
   //home and away teams made dynamic
   const homeTeam = 'Salt'; 
@@ -30,7 +31,7 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow down={downValue}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
